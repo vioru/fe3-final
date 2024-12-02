@@ -17,6 +17,7 @@ code {
   border: none;
   width: 100%;
   cursor: pointer;
+  border-radius: 0px 0px 20px 20px;
 }
 
 h1{
@@ -37,29 +38,11 @@ a{
   cursor: pointer;
 }
 a:hover{
-  color: rgb(136, 136, 136);
+  color: rgb(194, 194, 194);
 } 
 
-footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
-}
 
-footer > img{
-  width: 200px;
-  margin: 0;
-}
-footer > p{
-  margin: 0;
-  padding-top: 0.7rem;
-}
+
 
 form{
   display: flex;
@@ -75,9 +58,9 @@ form{
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  width: 250px;
   border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 20px;
 }
 
 .card:hover{
@@ -92,6 +75,13 @@ form{
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
+}
+
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 20px 20px 0px 0px;
 }
 
 table {
@@ -113,10 +103,76 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+.footerContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  margin-top: 2rem;
+
+img{
+  width: 200px;
+  margin: 0;
+}
+
+p{
+  background-color: rgb(18, 218, 191);
+  padding: 1rem;
+  font-weight: 600;
+  color: #000;
+  margin-top: 3rem;
+}
+.section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+
+  img{
+    filter: invert(100%);
+    width: 30px;
+    padding: 10px;
+  }
+
+}
+}
+
 .dark{
   background-color: #12121296;
   color: white;
+  padding-bottom: 2rem ;
 }
 .dark > a {
   color: white;
+}
+
+.dark  .favButton {
+  color: rgb(255, 253, 253);
+  background-color: rgb(55, 55, 55);
+}
+
+.dark .card{
+  border: 0.5px solid rgb(171, 171, 171);
+}
+
+
+.dark .card:hover{
+  border: 0.5px solid rgb(51, 255, 228);
+}
+
+.dark .socialMedia > img {
+    filter: none ; 
+}
+
+.dark .section > img{
+filter: invert(100%);
 }

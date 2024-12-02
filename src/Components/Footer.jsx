@@ -1,12 +1,25 @@
-import React from 'react'
+import React from "react";
+import { footerImages } from "../utils/urls";
+// import styles from "../Styles/footerStyle.modules.css"
+// import "../Styles/footerStyle.modules.css";
 
 const Footer = () => {
   return (
-    <footer>
-        <p>Powered by</p>
-        <img src="./img/DH.png" alt='DH-logo' />
+    <footer className="footerContainer">
+      <p>Powered by</p>
+      <div className="section">
+        <img className="dh-img" src={footerImages.dh} alt="DH-logo" />
+        <div className="socialMedia">
+          {Object.entries(footerImages).map(([key, value], index) => {
+            if (key !== "dh") {
+              return <img key={index} src={value} alt={`logo de ${key}`} />;
+            }
+            return null;
+          })}
+        </div>
+      </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
