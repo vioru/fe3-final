@@ -5,6 +5,11 @@ export const reducer = (state, action) => {
             theme: state.theme === "" ? "dark" : "" };
       case "GET_DATA":
         return {...state, data: action.payload };
+      case "GET_DETAIL":
+        return {...state, detail: action.payload };
+        ;
+        case "GET_ID_DETAIL":
+        return {...state, id: action.payload };
       default:
         throw new Error("Acción no existente");
     }

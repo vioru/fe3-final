@@ -12,7 +12,12 @@ const Footer = () => {
         <div className="socialMedia">
           {Object.entries(footerImages).map(([key, value], index) => {
             if (key !== "dh") {
-              return <img key={index} src={value} alt={`logo de ${key}`} />;
+              return <a 
+              target="_blank" 
+              href={`https://www.${key}.com`}
+              rel="noopener noreferrer"> 
+              <img key={index} src={value} alt={`logo de ${key}`} />
+              </a>;
             }
             return null;
           })}

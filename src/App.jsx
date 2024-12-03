@@ -14,7 +14,6 @@ import { useContextGlobal} from "./utils/global.context";
 
 function App() {
 const { state } = useContextGlobal();
-// console.log("la data "+ state.theme);
 
   return (
     <div className={`App  ${state.theme}`}>

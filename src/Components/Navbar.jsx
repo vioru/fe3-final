@@ -9,7 +9,7 @@ import "../Styles/Navbar.modules.css"
 
 const Navbar = () => {
   const { dispatch ,state } = useContextGlobal();
-  console.log(state.theme);
+  // console.log(state.theme);
   
 
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
@@ -27,8 +27,10 @@ const Navbar = () => {
       <Link to={routes.favs}>
         Mis favoritos
       </Link>
-      <button onClick={() => dispatch({ type: "CHANGE_THEME" })}
-      >{state.theme == "dark" ? <p>☀️</p> : <p>🌙</p>}</button>
+      <button 
+      className={state.theme == "dark" ? "darkButton" : ""}
+      onClick={() => dispatch({ type: "CHANGE_THEME" })}
+      >{state.theme == "dark" ? <>☀️</> : <>🌙</>}</button>
     </nav>
   )
 }
