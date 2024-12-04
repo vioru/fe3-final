@@ -8,8 +8,17 @@ export const reducer = (state, action) => {
       case "GET_DETAIL":
         return {...state, detail: action.payload };
         ;
-        case "GET_ID_DETAIL":
-        return {...state, id: action.payload };
+        case "ADD_FAV":
+          // console.log("llegué a add fav" );
+          // console.log(action.payload);
+          // console.log(state.favs);
+          return {...state, favs: [...state.favs, action.payload]};
+        ;
+        case "UPDATE_FAV":
+          return {...state, favs: action.payload };
+        ;
+        // case "GET_ID_DETAIL":
+        // return {...state, id: action.payload };
       default:
         throw new Error("Acción no existente");
     }

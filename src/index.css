@@ -20,6 +20,17 @@ code {
   border-radius: 0px 0px 20px 20px;
 }
 
+.deleteFav{
+  background-color: rgb(255, 137, 137);
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0px 0px 20px 20px;
+}
+
+
+
 h1{
   text-align: center;
 }
