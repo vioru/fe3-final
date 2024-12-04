@@ -92,8 +92,8 @@ const Form = () => {
           onChange={(event) => setUser({ ...user, email: event.target.value })}
         />
         <button type="submit">Enviar</button>
-        {errors.email ? <p>{errors.email}</p> : ""}
         {errors.name ? <p>{errors.name}</p> : ""}
+        {errors.email ? <p>{errors.email}</p> : ""}
       </form>
       {message ? (
         <b> {message} </b>

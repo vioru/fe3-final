@@ -12,7 +12,7 @@ const Favs = () => {
 
   return (
     <>
-      <h1>Dentists Favs</h1>
+      <h1>Dentistas Favoritos</h1>
       <div className="card-grid">
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}
@@ -22,7 +22,8 @@ const Favs = () => {
               {[...state.favs].reverse().map((favs)=>(
            <Card key={favs.id} data ={favs} photo ={urlImg[favs.id]} />
         ))}
-        </>) : ("No hay favoritos aún") }
+        </>) : (
+          <p className="noFav"> No hay favoritos aún</p> ) }
       </div>
     </>
   );

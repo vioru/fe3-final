@@ -37,7 +37,6 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
   justify-content: flex-start;
   padding: 1rem;
 }
@@ -130,7 +129,7 @@ form p{
 table {
  border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+    width: 95%;
     display: table;
     border: 1px solid #ccc;
 }
@@ -169,6 +168,8 @@ i{
   align-items: center;
   margin-right: 15px;
   font-size: 20px;
+  cursor: pointer;
+
 }
 .footerContainer{
   display: flex;
@@ -243,4 +244,6 @@ p{
 .dark .section > img{
 filter: invert(100%);
 }
-
+.noFav{
+  margin-bottom:12%;
+}

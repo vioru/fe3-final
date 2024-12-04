@@ -30,7 +30,7 @@ const Detail = () => {
     <div>
       
       <i class="fa-solid fa-left-long icon-text" onClick={() => navigate(-1)}> </i>
-      <p className="icon-text">Atrás</p>
+      <p className="icon-text" onClick={() => navigate(-1)} >Atrás</p>
 
       <h1 className="detail-container">Datos del dentista # {id} </h1>
       {state.detail && <Table dentist={state.detail}  />} 

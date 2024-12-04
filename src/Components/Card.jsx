@@ -10,11 +10,23 @@ const Card = ({ data, photo }) => {
   
   const addFav = () => {
     // Aqui iria la logica para agregar la Card en el localStorage
-    dispatch({ type: "ADD_FAV", payload: data });
+
+    const favRepeat = state.favs.filter((item) => item.id == id);
+    console.log("exite");
+    console.log("el lengthg" + favRepeat.length);
+    console.log(favRepeat);
+
+    if(favRepeat.length > 0) {
+      console.log("ya está en favoritos");
+      //enviar mensaje de ya esta en favoritos y que no se puede volver a agregar o decirle que si quiere ver sus favoritos
+    }else{
+      console.log("hacemos el dispatch");
+      dispatch({ type: "ADD_FAV", payload: data });
+    }
+
   };
 
-  const deleteFav = (id) => {
-    console.log(id);   
+  const deleteFav = () => {
     const updateFavs = state.favs.filter((item) => item.id !== id);
     console.log(updateFavs);
     dispatch({ type: "UPDATE_FAV", payload: updateFavs });
@@ -26,14 +38,7 @@ const Card = ({ data, photo }) => {
        No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle 
       Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
 
-      {location.pathname === "/favs" ?
-      (<>
-        <img src={photo} alt="foto del doctor" />
-        <p>{name} </p>
-        <p>{username}</p>
-      
-      </>) :
-        ( <Link
+        <Link
           className="card-link"
           onClick={() => dispatch({ type: "GET_DETAIL", payload: data })}
           to={`/dentista/${id}`}>
@@ -41,8 +46,7 @@ const Card = ({ data, photo }) => {
           <p>{name} </p>
           <p>{username}</p>
         </Link>
-  )}
-      {location.pathname === "/favs" ?  <button onClick={() => deleteFav(id)} className="deleteFav">
+      {location.pathname === "/favs" ?  <button onClick={() => deleteFav()} className="deleteFav">
         ⭐ Eliminar favorito
       </button>:
             <button onClick={addFav} className="favButton">
