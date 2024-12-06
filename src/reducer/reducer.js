@@ -15,10 +15,10 @@ export const reducer = (state, action) => {
           return {...state, favs: [...state.favs, action.payload]};
         ;
         case "UPDATE_FAV":
+          console.log(action.payload);
+          
           return {...state, favs: action.payload };
         ;
-        // case "GET_ID_DETAIL":
-        // return {...state, id: action.payload };
       default:
         throw new Error("Acción no existente");
     }

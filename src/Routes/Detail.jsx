@@ -1,7 +1,4 @@
-import { useEffect, useState } from "react";
-import { urlApi } from "../utils/urls";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
 import Table from "../Components/Table";
 import { useContextGlobal} from "../utils/global.context";
 

@@ -18,7 +18,6 @@ const Favs = () => {
         {/* Deberan renderizar una Card por cada uno de ellos */}
         {state.favs.length > 0 ?
         (<> 
-                  {/* {[...state.favs[0]].reverse().map((favs)=>( */}
               {[...state.favs].reverse().map((favs)=>(
            <Card key={favs.id} data ={favs} photo ={urlImg[favs.id]} />
         ))}
