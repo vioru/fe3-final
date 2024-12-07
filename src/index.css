@@ -247,3 +247,8 @@ filter: invert(100%);
 .noFav{
   margin-bottom:12%;
 }
+.dark form p{
+  color: rgb(232, 0, 0);
+  background-color: rgba(240, 120, 120, 0.456);
+
+}
